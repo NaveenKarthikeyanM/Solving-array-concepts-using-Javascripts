@@ -44,3 +44,64 @@ let res2=arr6.slice(rotate).concat(arr6.slice(0,rotate));
 console.log(res2)    //Output: [ 3, 4, 5, 1, 2 ]
 
 //==================================================================================================================================================================
+
+//Adding two arrays
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const sum = array1.map((num, index) => num + array2[index]);
+console.log(sum);                
+
+//Output: [5, 7, 9]
+
+//==============================================================================================================================================
+
+//Subtracting two arrays
+
+const array3 = [1, 2, 3];
+const array4 = [4, 5, 6];
+
+const diff = array3.map((num, index) => num - array4[index]);
+console.log(diff); 
+
+// Output: [-3, -3, -3]
+
+//==============================================================================================================================================
+
+//Comparing two arrays
+
+function arraysEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;
+  }
+  
+  const arr1 = [1, 2, 3];
+  const arr2 = [1, 2, 3];
+  
+  const isEqual = arraysEqual(arr1, arr2);
+  console.log(isEqual)
+
+// Output: true
+
+//================================================================================================================================================
+
+//Inserting array element at specified position
+
+function insertAtPosition(arr, element, position) {
+    arr.splice(position, 0, element);
+    return arr;
+  }
+
+  const array = [1, 2, 3, 5];
+  const element = 4;
+  const position = 3;
+  
+  const result = insertAtPosition(array, element, position);
+  console.log(result); 
+  
+// Output: [1, 2, 3, 4, 5]
+
+//================================================================================================================================================
